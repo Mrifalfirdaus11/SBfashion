@@ -1,0 +1,504 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between; /* kiri dan kanan */
+  align-items: center;
+  padding: 20px 50px;
+  background: white;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 140px; /* jarak antara logo dan menu */
+}
+
+nav .cart img {
+  height: 27px; /* ubah sesuai ukuran yang kamu mau */
+  width: auto;
+  cursor: pointer; /* biar keliatan bisa diklik */
+}
+.search {
+  margin-right: 15px;
+}
+
+nav .logo img {
+  height: 25px;
+  width: auto;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 40px; /* jarak antar link */
+}
+
+nav .nav-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+nav .cart {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Search Overlay */
+.search-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* Saat aktif (muncul) */
+.search-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Box input search */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 30px;
+  width: 50%;
+  max-width: 500px;
+}
+
+/* Input text */
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Tombol close */
+.close-search {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Gambar ikon search di dalam box */
+.search-box img.search-btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Ini bagian hero image */
+.hero {
+  width: 88%;
+  padding: 50px 80px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between; /* biar gambar dan teks ada jarak */
+  align-items: center;
+  height: 65vh;
+  background-color: #a2a7ab;
+}
+
+.hero-text {
+  max-width: 45%;
+}
+
+.hero-text h1 {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+  padding-left: 30px;
+  line-height: 1.6;
+}
+
+.shop-btn {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 14px 27px;
+  margin-left: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #333;
+}
+
+/*  Fokus pergeseran gambar ke kanan */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* dorong gambar ke kanan */
+  margin-right: 60px; /* tambah jarak kanan dari container */
+}
+
+.hero-image img {
+  width: 720px;
+  height: auto;
+  object-fit: contain;
+  transform: translateX(10px); /* geser gambar 50px ke kanan */
+}
+
+/* COLLECTION SECTION */
+.collection-section {
+  width: 88%;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.collection-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Setiap card */
+.collection-item {
+  background-color: #a2a7ab;
+  flex: 1;
+  min-width: 350px;
+  max-width: 420px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+  transition: transform 0.3s ease;
+}
+
+.collection-item:hover {
+  transform: translateY(-8px);
+}
+
+/* Gambar di kanan */
+.collection-item .img1 {
+  width: 195px;
+  height: auto;
+  margin-bottom: 30px;
+  object-fit: contain;
+}
+
+.collection-item .img2 {
+  width: 215px;
+  height: auto;
+  margin-bottom: 0px;
+  object-fit: contain;
+}
+
+.collection-item .img3 {
+  width: 219px;
+  height: auto;
+  margin-bottom: 0px;
+  object-fit: contain;
+}
+
+/* Teks di kiri */
+.collection-text {
+  text-align: left;
+}
+
+.collection-text h3 {
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.collection-text p {
+  color: #333;
+  font-size: 15px;
+}
+
+/* Heading bawah */
+.collection-heading {
+  margin-top: 50px;
+}
+
+.collection-heading h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.collection-categories {
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+}
+
+.collection-categories span {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.collection-categories .active {
+  color: #111;
+  font-weight: 700;
+}
+
+.collection-categories .new {
+  color: #a2a7ab;
+}
+
+.collection-categories .most {
+  color: #ccc;
+}
+
+.collection-categories span:hover {
+  color: #111;
+}
+
+/* Ini bagian produk */
+.product-section {
+  width: 88%;
+  margin: 60px auto;
+}
+
+.product-card {
+  transition: all 0.3s ease;
+  background-color: #f0f0f0;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.product-info {
+  padding: 15px;
+  background-color: #f0f0f0;
+}
+
+.product-info h6 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.product-info p {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0;
+}
+
+.product-info .price {
+  margin-top: 5px;
+  font-weight: 500;
+  color: #000;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-header h5 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+select {
+  font-weight: bold;
+  border: 0.5px solid #ccc;
+  padding: 15px 25px;
+  border-radius: 1px;
+}
+
+/* Kalao ini, bagian footer yaa kawan */
+
+footer {
+  width: 88%;
+  margin: auto;
+  border-top: 1px solid #e0e0e0;
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+footer h6 {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.2s;
+}
+
+footer ul li a:hover {
+  color: #888;
+}
+
+.payment-img {
+  background-color: #000;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.payment-img img {
+  max-width: 180px;
+  display: block;
+}
+
+.footer-brand {
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.footer-brand span {
+  font-weight: 700;
+}
+
+.social-icons i {
+  font-size: 1.1rem;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.social-icons i:hover {
+  color: #666;
+}
+
+.contact-info p,
+.store-info p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #000;
+}
+
+.contact-info a:hover {
+  color: #555;
+}
+
+.store-info strong {
+  font-weight: 600;
+}
+
+/* Untuk tampilan mobile (layar <= 576px) */
+@media (max-width: 576px) {
+  .hero {
+    flex-direction: row; /* tetap sejajar kiri-kanan */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: auto;
+    background-color: #a2a7ab;
+  }
+
+  .hero-text {
+    max-width: 50%;
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    line-height: 1.4;
+    padding-left: 0;
+  }
+
+  .shop-btn {
+    margin-left: 0;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0;
+  }
+
+  .hero-image img {
+    width: 140px; /* biar gak terlalu besar */
+    height: auto;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+    letter-spacing: 4px;
+  }
+}
