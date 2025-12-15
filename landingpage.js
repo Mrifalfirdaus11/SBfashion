@@ -80,3 +80,27 @@ scrollBtn.onclick = function () {
         behavior: "smooth"
     });
 };
+
+
+//SUARA VIDEO LANDINGPAGE COLLABORATION
+const video = document.getElementById("collabVideo");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Video terlihat
+                video.muted = false;
+                video.play();
+            } else {
+                // Video keluar layar
+                video.muted = true;
+                video.pause();
+            }
+        });
+    }, {
+        threshold: 0.5, // 50% video terlihat
+    }
+);
+
+observer.observe(video);
